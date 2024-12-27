@@ -13,7 +13,7 @@ const Highlights = () => {
                 <h2 className="highlight-subtopic-title">Internship</h2>
                 <div className="highlight-row">
                     <div className="highlight-section__pic-container">
-                        <img src="/gtn.png" alt="GTN Logo" className="highlight-company-logo" />
+                        <img src={`${import.meta.env.BASE_URL}/gtn.png`} alt="GTN Logo" className="highlight-company-logo" />
                     </div>
                     <div className="highlight-about-details-container">
                         <p>
@@ -34,7 +34,7 @@ const Highlights = () => {
                 <h2 className="highlight-subtopic-title">Open Source Contributions</h2>
                 <div className="highlight-row">
                     <div className="highlight-section__pic-container">
-                        <img src="/grafana.png" alt="Grafana Logo" className="highlight-company-logo" />
+                        <img src={`${import.meta.env.BASE_URL}/grafana.png`} alt="Grafana Logo" className="highlight-company-logo" />
                     </div>
                     <div className="highlight-about-details-container">
                         <p>Contributed to the Grafana. Below are some key PRs:</p>

@@ -6,19 +6,19 @@ import { Box, Button, Typography, Grid } from "@mui/material";
 const mediumArticles = [
     {
         title: "Dockerizing and Deploying a Full-Stack Application with Vite + React and Spring Boot on Kubernetes",
-        image: "/docker.png",
+        image: `${import.meta.env.BASE_URL}/docker.png`,
         link: "https://medium.com/dockerize-fullstack",
         description: "A step-by-step guide to containerizing React and Spring Boot apps with Docker.",
     },
     {
         title: "A Comprehensive Guide to Upgrading from JBoss EAP 7.4 to 8.0: Key Changes, Challenges, and Best Practices",
-        image: "/jboss.png",
+        image: `${import.meta.env.BASE_URL}/jboss.png`,
         link: "https://kavindunilshanliyanage.medium.com/a-comprehensive-guide-to-upgrading-from-jboss-eap-7-4-cbe0b63129de",
         description: "Learn Kubernetes basics and deploy scalable containerized applications.",
     },
     {
         title: "Immutability of String class in Java",
-        image: "/java.png",
+        image: `${import.meta.env.BASE_URL}/java.png`,
         link: "https://kavindunilshanliyanage.medium.com/immutability-of-string-class-in-java-38dc6d5a6041",
         description: "Implement secure authentication in React apps using Auth0.",
     },
@@ -124,7 +124,7 @@ const TechProfiles = () => {
                     </a>
                     <a href="https://www.hackerrank.com/profile/NilshanRJ10" target="_blank" rel="noopener noreferrer" className="profile-link">
                         <img
-                            src="/hackerrank.png"
+                            src={`${import.meta.env.BASE_URL}/hackerrank.png`}
                             alt="HackerRank"
                             style={{ width: "120px", height: "60px" }}
                         />

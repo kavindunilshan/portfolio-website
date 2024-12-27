@@ -79,7 +79,7 @@ const Home = () => {
                 <h1 className="title">About Me</h1>
                 <div className="section-container">
                     <div className="section__pic-container-about">
-                        <img src="/about.png" alt="Profile picture" className="about-pic"/>
+                        <img src={`${import.meta.env.BASE_URL}/about.png`} alt="Profile picture" className="about-pic"/>
                     </div>
                     <div className="about-details-container">
                         <div className="text-container">
@@ -93,7 +93,7 @@ const Home = () => {
                         <h2 className="subtopic-title">Education</h2>
                         <div className="about-containers">
                             <div className="details-container">
-                                <img src="/public/uom.jpg" alt="University Logo" className="icon"/>
+                                <img src={`${import.meta.env.BASE_URL}/public/uom.jpg`} alt="University Logo" className="icon"/>
                                 <h3>University of Moratuwa</h3>
                                 <p>
                                     B.Sc. Engineering (Hons) in Computer Science Engineering <br/>
@@ -103,7 +103,7 @@ const Home = () => {
                                 </p>
                             </div>
                             <div className="details-container">
-                                <img src="/public/rcm.png" alt="School Logo" className="icon"/>
+                                <img src={`/public/rcm.png`} alt="School Logo" className="icon"/>
                                 <h3>Rahula College Matara</h3>
                                 <p>
                                     G.C.E. A/L 2019: 3 A Passes (Physical Science Stream) <br/>

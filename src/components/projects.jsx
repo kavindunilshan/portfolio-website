@@ -5,7 +5,7 @@ import { Box, Button, Typography, Grid } from "@mui/material";
 const projects = [
     {
         title: "Final Year Project",
-        image: "/uom.jpg",
+        image: `${import.meta.env.BASE_URL}/uom.jpg`,
         githubLink: "https://github.com/final-year-project-backend",
         liveDemo: "https://github.com/final-year-project-frontend",
         description:
@@ -14,7 +14,7 @@ const projects = [
     },
     {
         title: "SpendWise",
-        image: "/spendwise.png",
+        image: `${import.meta.env.BASE_URL}/spendwise.png`,
         githubLink: "https://github.com/spendwise-frontend",
         liveDemo: "https://github.com/spendwise-backend",
         description:
@@ -23,7 +23,7 @@ const projects = [
     },
     {
         title: "WatchMovie",
-        image: "/watchmovie.png",
+        image: `${import.meta.env.BASE_URL}/watchmovie.png`,
         githubLink: "https://github.com/watchmovie-frontend",
         liveDemo: "https://github.com/watchmovie-backend",
         description:
@@ -32,7 +32,7 @@ const projects = [
     },
     {
         title: "Invex Pro",
-        image: "/invex.png",
+        image: `${import.meta.env.BASE_URL}/invex.png`,
         githubLink: "https://github.com/invex-pro-frontend",
         liveDemo: "https://github.com/invex-pro-backend",
         description:
@@ -41,7 +41,7 @@ const projects = [
     },
     {
         title: "CosmicWays",
-        image: "/cosmic.png",
+        image: `${import.meta.env.BASE_URL}/cosmic.png`,
         githubLink: "https://github.com/cosmicways",
         liveDemo: "https://github.com/cosmicways",
         description:
@@ -50,7 +50,7 @@ const projects = [
     },
     {
         title: "Tour Planning Platform",
-        image: "/tour.png",
+        image: `${import.meta.env.BASE_URL}/tour.png`,
         githubLink: "https://github.com/tour-planning-frontend",
         liveDemo: "https://github.com/tour-planning-backend",
         description:
