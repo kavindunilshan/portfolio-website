@@ -23,7 +23,7 @@ const projects = [
     },
     {
         title: "WatchMovie",
-        image: "./assets/watchmovie.png",
+        image: "/watchmovie.png",
         githubLink: "https://github.com/watchmovie-frontend",
         liveDemo: "https://github.com/watchmovie-backend",
         description:
@@ -32,7 +32,7 @@ const projects = [
     },
     {
         title: "Invex Pro",
-        image: "./assets/invex-pro.png",
+        image: "/invex.png",
         githubLink: "https://github.com/invex-pro-frontend",
         liveDemo: "https://github.com/invex-pro-backend",
         description:
@@ -41,7 +41,7 @@ const projects = [
     },
     {
         title: "CosmicWays",
-        image: "./assets/cosmicways.png",
+        image: "/cosmic.png",
         githubLink: "https://github.com/cosmicways",
         liveDemo: "https://github.com/cosmicways",
         description:
@@ -50,7 +50,7 @@ const projects = [
     },
     {
         title: "Tour Planning Platform",
-        image: "./assets/tour-planning.png",
+        image: "/tour.png",
         githubLink: "https://github.com/tour-planning-frontend",
         liveDemo: "https://github.com/tour-planning-backend",
         description:

@@ -45,7 +45,7 @@ const Home = () => {
 
             <section id="profile">
                 <div className="section__pic-container">
-                    <img src="../../src/assets/profile-pic.jpeg" alt="John Doe profile picture"/>
+                    <img src="/profile-pic.jpeg" alt="John Doe profile picture"/>
                 </div>
                 <div className="section__text">
                     <p className="section__text__p1">Hello, I'm</p>
@@ -78,8 +78,8 @@ const Home = () => {
                 <p className="section__text__p1">Get To Know More</p>
                 <h1 className="title">About Me</h1>
                 <div className="section-container">
-                    <div className="section__pic-container">
-                        <img src="../../src/assets/profile-pic.jpeg" alt="Profile picture" className="about-pic"/>
+                    <div className="section__pic-container-about">
+                        <img src="/about.png" alt="Profile picture" className="about-pic"/>
                     </div>
                     <div className="about-details-container">
                         <div className="text-container">
@@ -142,7 +142,7 @@ const Home = () => {
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+                <p>Copyright &#169; 2023 Kavindu Nilshan. All Rights Reserved.</p>
             </footer>
         </div>
     );
