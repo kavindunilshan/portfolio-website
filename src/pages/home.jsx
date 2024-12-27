@@ -45,7 +45,7 @@ const Home = () => {
 
             <section id="profile">
                 <div className="section__pic-container">
-                    <img src="/profile-pic.jpeg" alt="John Doe profile picture"/>
+                    <img src={`${import.meta.env.BASE_URL}/profile-pic.jpeg`} alt="Kavindu Nilshan profile picture"/>
                 </div>
                 <div className="section__text">
                     <p className="section__text__p1">Hello, I'm</p>
