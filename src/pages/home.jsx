@@ -3,6 +3,7 @@ import {CheckCircle, LinkedIn, GitHub, WorkspacePremium, ArrowLeft} from '@mui/i
 import "../styles/home.css";
 import Contact from "../components/contact.jsx";
 import Projects from "../components/projects.jsx";
+import Highlights from "../components/highlights.jsx";
 
 const Home = () => {
     const toggleMenu = () => {
@@ -13,7 +14,7 @@ const Home = () => {
     return (
         <div className="home">
             <nav id="desktop-nav">
-                <div className="logo">Kavi N</div>
+                <div className="logo">Kavindu Nilshan</div>
                 <ul className="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#highlights">Highlights</a></li>
@@ -23,7 +24,7 @@ const Home = () => {
                 </ul>
             </nav>
             <nav id="hamburger-nav">
-                <div className="logo">John Doe</div>
+                <div className="logo">Kavindu Nilshan</div>
                 <div className="hamburger-menu">
                     <div className="hamburger-icon" onClick={toggleMenu}>
                         <span></span>
@@ -111,40 +112,8 @@ const Home = () => {
                 </div>
             </section>
 
-
-            <section id="experience">
-                <p className="section__text__p1">Explore My</p>
-                <h1 className="title">Experience</h1>
-                <div className="experience-details-container">
-                    <div className="about-containers">
-                        <div className="details-container">
-                            <h2 className="experience-sub-title">Frontend Development</h2>
-                            <div className="article-container">
-                                <article>
-                                    <CheckCircle className="icon"/>
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Experienced</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <CheckCircle className="icon"/>
-                                    <div>
-                                        <h3>CSS</h3>
-                                        <p>Experienced</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <CheckCircle className="icon"/>
-                                    <div>
-                                        <h3>SASS</h3>
-                                        <p>Intermediate</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section id="highlights">
+                <Highlights />
             </section>
 
             <section id="projects">

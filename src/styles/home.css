@@ -59,7 +59,7 @@ a:hover {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .logo:hover {
@@ -552,4 +552,30 @@ footer p {
 
 .section__pic-container img{
     border-radius: 50%;
+}
+
+/* Highlights section */
+.pr-links-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pr-links-list li {
+    margin-bottom: 10px;
+}
+
+.pr-links-list a {
+    font-size: 16px;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.pr-links-list a:hover {
+    text-decoration: underline;
+}
+
+.pr-links-list p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
 }
