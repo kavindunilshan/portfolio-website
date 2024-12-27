@@ -4,11 +4,14 @@ import "../styles/home.css";
 import Contact from "../components/contact.jsx";
 import Projects from "../components/projects.jsx";
 import Highlights from "../components/highlights.jsx";
+import TechProfiles from "../components/techProfiles.jsx";
 
 const Home = () => {
     const toggleMenu = () => {
-        const menuLinks = document.querySelector(".menu-links");
-        menuLinks.classList.toggle("active");
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
     };
 
     return (
@@ -59,11 +62,13 @@ const Home = () => {
                     <div id="socials-container">
                         <LinkedIn
                             className="icon"
-                            onClick={() => window.location.href = "https://linkedin.com/"}
+                            sx={{ fontSize: '40px' }}
+                            onClick={() => window.location.href = "https://www.linkedin.com/in/kavindun"}
                         />
                         <GitHub
                             className="icon"
-                            onClick={() => window.location.href = "https://github.com/"}
+                            sx={{ fontSize: '40px' }}
+                            onClick={() => window.location.href = "https://github.com/kavindunilshan"}
                         />
                     </div>
                 </div>
@@ -118,6 +123,10 @@ const Home = () => {
 
             <section id="projects">
                 <Projects />
+            </section>
+
+            <section id="tech">
+                <TechProfiles />
             </section>
 
             <section id="contact">

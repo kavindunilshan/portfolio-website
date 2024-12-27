@@ -6,8 +6,6 @@
 .highlight-section-container {
     margin: 30px 0;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .highlight-subtopic-title {
@@ -86,3 +84,49 @@
         padding-left: 0;
     }
 }
+
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to the next line on smaller screens */
+    justify-content: space-between; /* Adjusts spacing between items */
+    gap: 15px; /* Adds spacing between items */
+    margin-top: 20px;
+}
+
+.profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin: 10px; /* Adds margin around each profile link */
+}
+
+.profile-link img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-link span {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Ensure proper scaling on smaller screens */
+@media (max-width: 768px) {
+    .profile-row {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .profile-link { /* Adjusts to 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-link {
+    }
+}
+

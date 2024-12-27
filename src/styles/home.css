@@ -42,7 +42,7 @@ nav {
 .nav-links {
     gap: 2rem;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 a {
@@ -217,7 +217,7 @@ section {
 
 .icon {
     cursor: pointer;
-    height: 2rem;
+    height: 4rem;
 }
 
 /* BUTTONS */
@@ -365,8 +365,14 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+#highlights {
+    position: relative;
+    margin-top: 100px;
+}
+
 #projects {
     position: relative;
+    margin-bottom: 100px;
 }
 
 .color-container {
