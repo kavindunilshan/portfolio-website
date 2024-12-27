@@ -1,6 +1,8 @@
 import React from "react";
 import {CheckCircle, LinkedIn, GitHub, WorkspacePremium, ArrowLeft} from '@mui/icons-material';
 import "../styles/home.css";
+import Contact from "../components/contact.jsx";
+import Projects from "../components/projects.jsx";
 
 const Home = () => {
     const toggleMenu = () => {
@@ -11,10 +13,11 @@ const Home = () => {
     return (
         <div className="home">
             <nav id="desktop-nav">
-                <div className="logo">John Doe</div>
+                <div className="logo">Kavi N</div>
                 <ul className="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#highlights">Highlights</a></li>
+                    <li><a href="#tech">TechProfiles</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -73,30 +76,41 @@ const Home = () => {
                         <img src="../../src/assets/profile-pic.jpeg" alt="Profile picture" className="about-pic"/>
                     </div>
                     <div className="about-details-container">
-                        <div className="about-containers">
-                            <div className="details-container">
-                                <WorkspacePremium className="icon"/>
-                                <h3>Experience</h3>
-                                <p>2+ years <br/>Frontend Development</p>
-                            </div>
-                            <div className="details-container">
-                                <WorkspacePremium className="icon"/>
-                                <h3>Education</h3>
-                                <p>B.Sc. Bachelors Degree<br/>M.Sc. Masters Degree</p>
-                            </div>
-                        </div>
                         <div className="text-container">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et
-                                laborum, rem,
-                                dolore eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus
-                                sint delectus velit.
+                                I am a passionate full-stack developer and a final-year Computer Science and Engineering
+                                student at the
+                                University of Moratuwa. I enjoy learning new technologies and continuously improving my
+                                skills.
                             </p>
+                        </div>
+                        <h2 className="subtopic-title">Education</h2>
+                        <div className="about-containers">
+                            <div className="details-container">
+                                <img src="/public/uom.jpg" alt="University Logo" className="icon"/>
+                                <h3>University of Moratuwa</h3>
+                                <p>
+                                    B.Sc. Engineering (Hons) in Computer Science Engineering <br/>
+                                    CGPA: 3.82 (out of 4.0) <br/>
+                                    Dean’s List: Semesters 1, 3, 4 <br/>
+                                    4.0 SGPA in Semester 1
+                                </p>
+                            </div>
+                            <div className="details-container">
+                                <img src="/public/rcm.png" alt="School Logo" className="icon"/>
+                                <h3>Rahula College Matara</h3>
+                                <p>
+                                    G.C.E. A/L 2019: 3 A Passes (Physical Science Stream) <br/>
+                                    District Rank: 20 <br/>
+                                    G.C.E. O/L 2016: 9 A Passes <br/>
+                                    Rasika Ekanayaka Scholarship: Highest Marks in O/L Mathematics
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <ArrowLeft className="icon arrow" onClick={toggleMenu}/>
             </section>
+
 
             <section id="experience">
                 <p className="section__text__p1">Explore My</p>
@@ -131,6 +145,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="projects">
+                <Projects />
+            </section>
+
+            <section id="contact">
+                <Contact />
             </section>
 
             <footer>
