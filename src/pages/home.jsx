@@ -78,7 +78,7 @@ const Home = () => {
                 <p className="section__text__p1">Get To Know More</p>
                 <h1 className="title">About Me</h1>
                 <div className="section-container">
-                    <div className="section__pic-container-about">
+                    <div className="section__pic-container section__pic-container-about">
                         <img src={`${import.meta.env.BASE_URL}/about.png`} alt="Profile picture" className="about-pic"/>
                     </div>
                     <div className="about-details-container">
@@ -93,7 +93,7 @@ const Home = () => {
                         <h2 className="subtopic-title">Education</h2>
                         <div className="about-containers">
                             <div className="details-container">
-                                <img src={`${import.meta.env.BASE_URL}/public/uom.jpg`} alt="University Logo" className="icon"/>
+                                <img src={`${import.meta.env.BASE_URL}/uom.jpg`} alt="University Logo" className="icon"/>
                                 <h3>University of Moratuwa</h3>
                                 <p>
                                     B.Sc. Engineering (Hons) in Computer Science Engineering <br/>
@@ -103,7 +103,7 @@ const Home = () => {
                                 </p>
                             </div>
                             <div className="details-container">
-                                <img src={`/public/rcm.png`} alt="School Logo" className="icon"/>
+                                <img src={`${import.meta.env.BASE_URL}/rcm.png`} alt="School Logo" className="icon"/>
                                 <h3>Rahula College Matara</h3>
                                 <p>
                                     G.C.E. A/L 2019: 3 A Passes (Physical Science Stream) <br/>
@@ -142,7 +142,7 @@ const Home = () => {
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <p>Copyright &#169; 2023 Kavindu Nilshan. All Rights Reserved.</p>
+                <p>Copyright &#169; 2024 Kavindu Nilshan. All Rights Reserved.</p>
             </footer>
         </div>
     );
