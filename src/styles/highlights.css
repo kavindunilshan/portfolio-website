@@ -130,3 +130,42 @@
     }
 }
 
+
+.highlight-tech-stack {
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.highlight-tech-stack h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6b6a6a;
+    margin-bottom: 20px;
+}
+
+.tech-stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-stack-list li {
+    background-color: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.tech-stack-list li:hover {
+    background-color: #007BFF;
+    color: white;
+    border-color: #007BFF;
+}
+
+
