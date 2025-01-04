@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { GitHub, Launch } from "@mui/icons-material";
-import { Box, Button, Typography, Grid } from "@mui/material";
+import {Box, Button, Typography, Grid, Dialog, DialogTitle, DialogContent} from "@mui/material";
 
 const projects = [
     {
@@ -9,7 +9,7 @@ const projects = [
         githubFrontend: "https://github.com/Minindu20/Dengue-Severity-Predictor",
         description:
             "A robust machine learning model to predict dengue outbreaks using weather and vegetation index data.",
-        techStack: "Python, Scikit-learn, Pandas, Matplotlib",
+        techStack: "Python, Scikit-learn, Pandas, Matplotlib, Random Forest, LSTM, SVR, Kriging",
     },
     {
         title: "SpendWise",
@@ -17,7 +17,7 @@ const projects = [
         githubFrontend: "https://github.com/kavindunilshan/spendwise-fo",
         githubBackend: "https://github.com/kavindunilshan/spendWise",
         description:
-            "A personal expense tracker with features like financial advice and education. Built for scalability and security.",
+            "A personal expense tracker with features like paid financial advice and financial education.",
         techStack: "Vite, React.js, Spring Boot, Okta Auth0, Docker, Kubernetes, Stripe, WSO2 Choreo",
         link: "https://e6c3f30e-3e58-45c9-94c7-3d0825797eac.e1-us-east-azure.choreoapps.dev/",
     },
@@ -59,8 +59,20 @@ const projects = [
     },
 ];
 
-
 const Projects = () => {
+    const [openDialog, setOpenDialog] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleOpenDialog = (project) => {
+        setSelectedProject(project);
+        setOpenDialog(true);
+    };
+
+    const handleCloseDialog = () => {
+        setSelectedProject(null);
+        setOpenDialog(false);
+    };
+
     return (
         <>
             <p className="section__text__p1">Browse My Recent</p>
@@ -74,12 +86,13 @@ const Projects = () => {
                             p={3}
                             borderRadius={2}
                             sx={{
-                                height: 400, // Set a fixed height for uniformity
+                                height: 350,
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "space-between",
                                 alignItems: "center",
                                 textAlign: "center",
+                                backgroundColor: "#ffffff",
                             }}
                         >
                             <Box className="image-container" sx={{ height: 150 }}>
@@ -87,24 +100,45 @@ const Projects = () => {
                                     src={project.image}
                                     alt={project.title}
                                     className="project-img"
-                                    style={{ maxHeight: "100%", maxWidth: "100%" }}
+                                    style={{ maxHeight: "100%", maxWidth: "100%", borderRadius: "8px" }}
                                 />
                             </Box>
-                            <Typography variant="h5" className="project-title">
+                            <Typography variant="h5" className="project-title" sx={{ color: "#333", fontWeight: 600 }}>
                                 {project.title}
                             </Typography>
-                            <Typography variant="body2" className="project-description">
+                            <Typography
+                                variant="body2"
+                                className="project-description"
+                                sx={{ color: "#555", marginBottom: "8px" }}
+                            >
                                 {project.description}
                             </Typography>
-                            <Typography variant="body2" className="project-tech-stack">
+                            <Typography
+                                variant="body2"
+                                className="project-tech-stack"
+                                sx={{ color: "#777", fontStyle: "italic" }}
+                            >
                                 <strong>Tech Stack:</strong> {project.techStack}
                             </Typography>
-                            <Box className="project-buttons" mt={2} display="flex" gap={1} flexDirection="column">
+                            <Box
+                                className="project-buttons"
+                                mt={1}
+                                display="flex"
+                                gap={1}
+                                flexDirection="row"
+                                justifyContent="center"
+                                width="100%"  // Ensure the buttons span the full width for alignment
+                            >
                                 {project.githubFrontend && project.githubBackend ? (
-                                    <Box display="flex" gap={1}>
+                                    <Box display="flex" gap={1} justifyContent="center">
                                         <Button
                                             variant="contained"
                                             color="primary"
+                                            sx={{
+                                                fontSize: "12px",
+                                                textTransform: "capitalize",
+                                                backgroundColor: "#1976d2",
+                                            }}
                                             startIcon={<GitHub />}
                                             onClick={() => window.open(project.githubFrontend, "_blank")}
                                         >
@@ -113,6 +147,11 @@ const Projects = () => {
                                         <Button
                                             variant="contained"
                                             color="primary"
+                                            sx={{
+                                                fontSize: "12px",
+                                                textTransform: "capitalize",
+                                                backgroundColor: "#1976d2",
+                                            }}
                                             startIcon={<GitHub />}
                                             onClick={() => window.open(project.githubBackend, "_blank")}
                                         >
@@ -123,6 +162,11 @@ const Projects = () => {
                                     <Button
                                         variant="contained"
                                         color="primary"
+                                        sx={{
+                                            fontSize: "12px",
+                                            textTransform: "capitalize",
+                                            backgroundColor: "#1976d2",
+                                        }}
                                         startIcon={<GitHub />}
                                         onClick={() => window.open(project.githubFrontend || project.githubBackend, "_blank")}
                                     >
@@ -133,6 +177,11 @@ const Projects = () => {
                                     <Button
                                         variant="contained"
                                         color="secondary"
+                                        sx={{
+                                            fontSize: "12px",
+                                            textTransform: "capitalize",
+                                            backgroundColor: "#d32f2f",
+                                        }}
                                         startIcon={<Launch />}
                                         onClick={() => window.open(project.link, "_blank")}
                                     >
@@ -140,10 +189,61 @@ const Projects = () => {
                                     </Button>
                                 )}
                             </Box>
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    color: "#1976d2",
+                                    cursor: "pointer",
+                                    textDecoration: "underline",
+                                    marginTop: "12px",
+                                }}
+                                onClick={() => handleOpenDialog(project)}
+                            >
+                                More Info >>>
+                            </Typography>
                         </Box>
                     </Grid>
                 ))}
             </Grid>
+            <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
+                {selectedProject && (
+                    <>
+                        <DialogTitle>{selectedProject.title}</DialogTitle>
+                        <DialogContent>
+                            <Typography variant="body1" gutterBottom>
+                                <strong>Description:</strong> {selectedProject.description}
+                            </Typography>
+                            <Typography variant="body1" gutterBottom>
+                                <strong>Tech Stack:</strong> {selectedProject.techStack}
+                            </Typography>
+                            {selectedProject.githubFrontend && (
+                                <Typography variant="body1">
+                                    <strong>Frontend Repo:</strong>{" "}
+                                    <a href={selectedProject.githubFrontend} target="_blank" rel="noopener noreferrer">
+                                        {selectedProject.githubFrontend}
+                                    </a>
+                                </Typography>
+                            )}
+                            {selectedProject.githubBackend && (
+                                <Typography variant="body1">
+                                    <strong>Backend Repo:</strong>{" "}
+                                    <a href={selectedProject.githubBackend} target="_blank" rel="noopener noreferrer">
+                                        {selectedProject.githubBackend}
+                                    </a>
+                                </Typography>
+                            )}
+                            {selectedProject.link && (
+                                <Typography variant="body1">
+                                    <strong>Live Demo:</strong>{" "}
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                        {selectedProject.link}
+                                    </a>
+                                </Typography>
+                            )}
+                        </DialogContent>
+                    </>
+                )}
+            </Dialog>
         </>
     );
 };

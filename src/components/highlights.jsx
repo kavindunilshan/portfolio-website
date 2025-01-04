@@ -1,13 +1,21 @@
-import React from "react";
-import { FiberManualRecord } from "@mui/icons-material";
+import React, {useState} from "react";
+import {FiberManualRecord, KeyboardDoubleArrowDown, KeyboardDoubleArrowUp} from "@mui/icons-material";
 import "../styles/highlights.css";
+import {Button} from "@mui/material";
 
 const Highlights = () => {
+    const [showMore, setShowMore] = useState(false);
+
+    const handleShowMore = () => {
+        setShowMore(!showMore);
+    };
+
     return (
         <div className="highlight-started">
-            <p className="section__text__p1">Key Milestones</p>
-            <h1 className="title">Highlights</h1>
+            <p className="section__text__p1">Professional Highlights</p>
+            <h1 className="title">Experiences</h1>
 
+            {/* Internship Section */}
             {/* Internship Section */}
             <div className="highlight-section-container">
                 <h2 className="highlight-subtopic-title">Internship</h2>
@@ -16,7 +24,7 @@ const Highlights = () => {
                         <img src={`${import.meta.env.BASE_URL}/gtn.png`} alt="GTN Logo" className="highlight-company-logo" />
                     </div>
                     <div className="highlight-about-details-container">
-                        <p>
+                        <p className="intern-info">
                             Position: Intern Software Engineer
                             <br/>
                             Organization: GTN Group
@@ -24,6 +32,63 @@ const Highlights = () => {
                             Period: Nov 2023 – May 2024
                             <br/>
                         </p>
+                        <div>
+                            <Button
+                                variant="outlined"
+                                color="primary"
+                                onClick={handleShowMore}
+                                endIcon={showMore ? <KeyboardDoubleArrowUp /> : <KeyboardDoubleArrowDown />}
+                                sx={{
+                                    marginBottom: '20px',
+                                    color: '#333',
+                                    border: '2px solid rgba(66,66,66,0.3)',
+                                    '&:hover': {
+                                        borderColor: 'rgba(66,66,66,0.7)',
+                                        backgroundColor: '#f0f0f0',
+                                    },
+                                }}
+                            >
+                                {showMore ? 'Show Less' : 'Show More'}
+                            </Button>
+
+                            {showMore && (
+                                <>
+                                    <p className="intern-description">
+                                        During my internship at GTN Group, I worked on several key projects that focused
+                                        on
+                                        enhancing backend performance, optimizing observability, and improving
+                                        application
+                                        monitoring. Some of my major contributions include:
+                                    </p>
+                                    <ul className="intern-projects">
+                                        <li><strong>Enhanced Backend Modularity:</strong> Applied the Java 9 modularity
+                                            concept to
+                                            improve the structure of the backend system. This involved creating module
+                                            descriptors
+                                            and optimizing dependencies between backend modules using Java, JakartaEE,
+                                            and Maven to
+                                            enhance modularity and maintainability.
+                                        </li>
+                                        <li><strong>Cost-Effective Observability:</strong> Transitioned observability
+                                            tools from
+                                            Datadog to Grafana Loki to reduce costs for non-production environments
+                                            while
+                                            maintaining quality monitoring and logging systems by leveraging open-source
+                                            solutions.
+                                        </li>
+                                        <li><strong>Status Monitor:</strong> Developed a status monitoring application
+                                            using Apache
+                                            ZooKeeper to track the status of multiple application instances. The system
+                                            managed
+                                            configurations, performed leader election, and triggered events based on
+                                            changes using
+                                            ZooKeeper’s watcher feature.
+                                        </li>
+                                    </ul>
+                                </>
+                            )}
+                        </div>
+
 
                         <div className="highlight-tech-stack">
                             <h3>Involved Tech Stack:</h3>

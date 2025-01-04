@@ -417,6 +417,7 @@ article .icon {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+    padding-top: 40px;
 }
 
 .contact-info-container {

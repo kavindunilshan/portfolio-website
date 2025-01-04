@@ -26,8 +26,9 @@
 }
 
 .highlight-company-logo {
-    width: 250px;
+    width: 300px;
     height: auto;
+    margin: 100px auto;
 }
 
 .highlight-about-details-container {
@@ -167,5 +168,69 @@
     color: white;
     border-color: #007BFF;
 }
+
+.intern-info,
+.intern-description,
+.intern-projects {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.intern-info {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.intern-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.intern-projects {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.intern-projects li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.intern-projects li strong {
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .intern-info,
+    .intern-description,
+    .intern-projects {
+        font-size: 1rem;
+    }
+
+    .intern-projects {
+        margin-left: 15px;
+    }
+
+    .intern-projects li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intern-info,
+    .intern-description {
+        font-size: 0.95rem;
+    }
+
+    .intern-projects li {
+        font-size: 0.9rem;
+    }
+}
+
 
 

@@ -1,13 +1,12 @@
-import React, {useEffect} from "react";
-import GitHubCalendar from "github-calendar";
+import React from "react";
 import {GitHub, Launch, LinkedIn} from "@mui/icons-material";
-import { Box, Button, Typography, Grid } from "@mui/material";
+import {Box, Button, Grid, Typography} from "@mui/material";
 
 const mediumArticles = [
     {
         title: "Dockerizing and Deploying a Full-Stack Application with Vite + React and Spring Boot on Kubernetes",
         image: `${import.meta.env.BASE_URL}/docker.png`,
-        link: "https://medium.com/dockerize-fullstack",
+        link: "https://kavindunilshanliyanage.medium.com/dockerizing-and-deploying-a-full-stack-application-with-vite-react-and-spring-boot-on-kubernetes-96b810e90ff2",
         description: "A step-by-step guide to containerizing React and Spring Boot apps with Docker.",
     },
     {
@@ -25,13 +24,6 @@ const mediumArticles = [
 ];
 
 const TechProfiles = () => {
-    useEffect(() => {
-        new GitHubCalendar(".calendar", "kavindunilshan", {
-            responsive: true,
-            tooltips: true,
-        }); // Replace with your GitHub username
-    }, []);
-
     return (
         <div>
             <p className="section__text__p1">Explore My Technical Profiles</p>
@@ -81,7 +73,7 @@ const TechProfiles = () => {
                                     />
                                 </Box>
                                 <Typography
-                                    style={{ color: "#242323", fontSize: "16px" }}
+                                    style={{ color: "#242323", fontSize: "16px", fontWeight: 600 }}
                                     className="article-title">
                                     {article.title}
                                 </Typography>

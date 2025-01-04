@@ -20,9 +20,9 @@ const Home = () => {
                 <div className="logo">Kavindu Nilshan</div>
                 <ul className="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#highlights">Highlights</a></li>
-                    <li><a href="#tech">TechProfiles</a></li>
+                    <li><a href="#highlights">Experiences</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tech">TechProfiles</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -36,8 +36,9 @@ const Home = () => {
                     </div>
                     <ul className="menu-links">
                         <li><a href="#about" onClick={toggleMenu}>About</a></li>
-                        <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+                        <li><a href="#highlights" onClick={toggleMenu}>Experiences</a></li>
                         <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
+                        <li><a href="#tech" onClick={toggleMenu}>TechProfiles</a></li>
                         <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
                     </ul>
                 </div>
@@ -137,8 +138,9 @@ const Home = () => {
                 <nav>
                     <ul className="nav-links">
                         <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#highlights">Experiences</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#tech">TechProfiles</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
