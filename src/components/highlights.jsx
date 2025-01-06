@@ -130,7 +130,7 @@ const Highlights = () => {
                             </li>
                             <li>
                                 <FiberManualRecord fontSize="small"/>
-                                <a href="https://github.com/grafana/grafana/pull/87368" target="_blank"
+                                <a href="c" target="_blank"
                                    rel="noopener noreferrer">
                                     PR #87368: Logs - Collapse multi-line logs and expand with Log Details
                                 </a>

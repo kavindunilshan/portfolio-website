@@ -53,9 +53,13 @@ const Home = () => {
                     <h1 className="title">Kavindu Nilshan</h1>
                     <p className="section__text__p2">Full-Stack Developer</p>
                     <div className="btn-container">
-                        <button className="btn btn-color-2" onClick={() => window.open("../assets/resume-example.pdf")}>
+                        <a
+                            href={`${import.meta.env.BASE_URL}/Kavindu Nilshan - Resume.pdf`}
+                            className="btn btn-color-2"
+                            download
+                        >
                             Download CV
-                        </button>
+                        </a>
                         <button className="btn btn-color-1" onClick={() => window.location.href = "#contact"}>
                             Contact Info
                         </button>

@@ -600,3 +600,7 @@ footer p {
     color: #777;
     margin-top: 5px;
 }
+
+.btn-container a {
+    text-decoration: none;
+}
