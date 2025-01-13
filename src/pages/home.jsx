@@ -102,8 +102,8 @@ const Home = () => {
                                 <h3>University of Moratuwa</h3>
                                 <p>
                                     B.Sc. Engineering (Hons) in Computer Science Engineering <br/>
-                                    CGPA: 3.76 (out of 4.0) <br/>
-                                    Dean’s List: Semesters 1, 3, 4 <br/>
+                                    CGPA: 3.77 (out of 4.0) <br/>
+                                    Dean’s List: Semesters 1, 3, 4 and 7 <br/>
                                     4.0 SGPA in Semester 1
                                 </p>
                             </div>
