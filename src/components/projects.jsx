@@ -222,7 +222,7 @@ const Projects = () => {
                                 }}
                                 onClick={() => handleOpenDialog(project)}
                             >
-                                More Info >>>
+                                More Info
                             </Typography>
                         </Box>
                     </Grid>
