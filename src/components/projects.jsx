@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { GitHub, Launch } from "@mui/icons-material";
 import {Box, Button, Typography, Grid, Dialog, DialogTitle, DialogContent} from "@mui/material";
+import ProjectDialog from "./project-data.jsx";
 
 const projects = [
     {
@@ -20,6 +21,13 @@ const projects = [
             "A personal expense tracker with features like paid financial advice and financial education.",
         techStack: "Vite, React.js, Spring Boot, Okta Auth0, Docker, Kubernetes, Stripe, WSO2 Choreo",
         link: "https://e6c3f30e-3e58-45c9-94c7-3d0825797eac.e1-us-east-azure.choreoapps.dev/",
+        images: [
+            `${import.meta.env.BASE_URL}/spendwise1.png`,
+            `${import.meta.env.BASE_URL}/spendwise.png`,
+            `${import.meta.env.BASE_URL}/spendwise2.png`,
+            `${import.meta.env.BASE_URL}/spendwise3.png`,
+            `${import.meta.env.BASE_URL}/spendwise4.png`,
+        ]
     },
     {
         title: "WatchMovie",
@@ -29,6 +37,14 @@ const projects = [
         description:
             "A theater booking system with a user-friendly interface and an admin portal for management.",
         techStack: "React.js, Spring Boot, MySQL, WSO2 Asgardio Authentication",
+        images: [
+            `${import.meta.env.BASE_URL}/watchmovie1.png`,
+            `${import.meta.env.BASE_URL}/watchmovie.png`,
+            `${import.meta.env.BASE_URL}/watchmovie2.png`,
+            `${import.meta.env.BASE_URL}/watchmovie3.png`,
+            `${import.meta.env.BASE_URL}/watchmovie4.png`,
+            `${import.meta.env.BASE_URL}/watchmovie5.png`,
+        ]
     },
     {
         title: "Invex Pro",
@@ -38,6 +54,13 @@ const projects = [
         description:
             "An inventory management system that simplifies stock and order tracking.",
         techStack: "Angular.js, Node.js, Okta Auth0",
+        images: [
+            `${import.meta.env.BASE_URL}/invex1.png`,
+            `${import.meta.env.BASE_URL}/invex.png`,
+            `${import.meta.env.BASE_URL}/invex2.png`,
+            `${import.meta.env.BASE_URL}/invex3.png`,
+            `${import.meta.env.BASE_URL}/invex4.png`,
+        ]
     },
     {
         title: "CosmicWays",
@@ -205,45 +228,12 @@ const Projects = () => {
                     </Grid>
                 ))}
             </Grid>
-            <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
-                {selectedProject && (
-                    <>
-                        <DialogTitle>{selectedProject.title}</DialogTitle>
-                        <DialogContent>
-                            <Typography variant="body1" gutterBottom>
-                                <strong>Description:</strong> {selectedProject.description}
-                            </Typography>
-                            <Typography variant="body1" gutterBottom>
-                                <strong>Tech Stack:</strong> {selectedProject.techStack}
-                            </Typography>
-                            {selectedProject.githubFrontend && (
-                                <Typography variant="body1">
-                                    <strong>Frontend Repo:</strong>{" "}
-                                    <a href={selectedProject.githubFrontend} target="_blank" rel="noopener noreferrer">
-                                        {selectedProject.githubFrontend}
-                                    </a>
-                                </Typography>
-                            )}
-                            {selectedProject.githubBackend && (
-                                <Typography variant="body1">
-                                    <strong>Backend Repo:</strong>{" "}
-                                    <a href={selectedProject.githubBackend} target="_blank" rel="noopener noreferrer">
-                                        {selectedProject.githubBackend}
-                                    </a>
-                                </Typography>
-                            )}
-                            {selectedProject.link && (
-                                <Typography variant="body1">
-                                    <strong>Live Demo:</strong>{" "}
-                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                                        {selectedProject.link}
-                                    </a>
-                                </Typography>
-                            )}
-                        </DialogContent>
-                    </>
-                )}
-            </Dialog>
+
+            <ProjectDialog
+                openDialog={openDialog}
+                handleCloseDialog={handleCloseDialog}
+                selectedProject={selectedProject}
+            />
         </>
     );
 };

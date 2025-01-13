@@ -1,0 +1,43 @@
+.pd-slideshow-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pd-image-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.pd-image {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.pd-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pd-nav-button {
+    color: #555;
+    transition: color 0.3s;
+}
+
+.pd-nav-button:hover {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .pd-image {
+        max-height: 250px;
+    }
+
+    .pd-navigation {
+        gap: 5px;
+    }
+}
