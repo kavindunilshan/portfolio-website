@@ -4,6 +4,12 @@ import {Box, Button, Grid, Typography} from "@mui/material";
 
 const mediumArticles = [
     {
+        title: "Securing Your Full-Stack App: Okta Auth0 Frontend Setup and RBAC Preparation with Vite, React, and Spring Boot",
+        image: `${import.meta.env.BASE_URL}/okta.png`,
+        link: "https://kavindunilshanliyanage.medium.com/securing-your-full-stack-app-okta-auth0-frontend-setup-and-rbac-preparation-with-vite-react-and-69dc1ee05732",
+        description: "Implement secure authentication in React apps using Auth0.",
+    },
+    {
         title: "Dockerizing and Deploying a Full-Stack Application with Vite + React and Spring Boot on Kubernetes",
         image: `${import.meta.env.BASE_URL}/docker.png`,
         link: "https://kavindunilshanliyanage.medium.com/dockerizing-and-deploying-a-full-stack-application-with-vite-react-and-spring-boot-on-kubernetes-96b810e90ff2",
@@ -15,12 +21,7 @@ const mediumArticles = [
         link: "https://kavindunilshanliyanage.medium.com/a-comprehensive-guide-to-upgrading-from-jboss-eap-7-4-cbe0b63129de",
         description: "Learn Kubernetes basics and deploy scalable containerized applications.",
     },
-    {
-        title: "Immutability of String class in Java",
-        image: `${import.meta.env.BASE_URL}/java.png`,
-        link: "https://kavindunilshanliyanage.medium.com/immutability-of-string-class-in-java-38dc6d5a6041",
-        description: "Implement secure authentication in React apps using Auth0.",
-    },
+
 ];
 
 const TechProfiles = () => {
