@@ -517,7 +517,9 @@ footer p {
 @media screen and (max-width: 600px) {
     #contact,
     footer {
-        height: 40vh;
+        padding-bottom: 2rem;
+        height: fit-content;
+        border-top: 1px solid black;
     }
     #profile {
         height: 83vh;
@@ -529,6 +531,7 @@ footer p {
     footer nav {
         height: fit-content;
         margin-bottom: 2rem;
+        margin-top: 30px;
     }
     .about-containers,
     .contact-info-upper-container,

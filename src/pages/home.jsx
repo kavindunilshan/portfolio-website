@@ -67,13 +67,13 @@ const Home = () => {
                     <div id="socials-container">
                         <LinkedIn
                             className="icon"
-                            sx={{ fontSize: '40px' }}
-                            onClick={() => window.location.href = "https://www.linkedin.com/in/kavindun"}
+                            sx={{fontSize: '40px'}}
+                            onClick={() => window.open("https://www.linkedin.com/in/kavindun", "_blank")}
                         />
                         <GitHub
                             className="icon"
-                            sx={{ fontSize: '40px' }}
-                            onClick={() => window.location.href = "https://github.com/kavindunilshan"}
+                            sx={{fontSize: '40px'}}
+                            onClick={() => window.open("https://github.com/kavindunilshan", "_blank")}
                         />
                     </div>
                 </div>
